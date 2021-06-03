@@ -1,0 +1,61 @@
+#form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 10rem;
+  border-radius: 50px;
+  background-color: #ffffff;
+  box-shadow: 30px 30px 61px #d9d9d9, -30px -30px 61px #ffffff;
+}
+
+.labels {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.select {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+.selectMenu {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+
+#filterButton {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    box-shadow: 30px 30px 61px #d9d9d9, -30px -30px 61px #ffffff;
+    margin-bottom: 1rem;
+    
+}
+#filterButton:hover {
+    background-color: black;
+    color: #ffffff;
+    cursor: pointer;
+}

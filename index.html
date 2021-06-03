@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="mainContainer">
+    <div id="form-container">
+        <form id="form">
+            <label for="orderByRating" class="labels">Order by rating</label>
+            <select id="orderByRating" name="orderByRating" class="select">
+                <option value="highestFirst" class="selectMenu">Highest First</option>
+                <option value="lowestFirst" class="selectMenu">Lowest First</option>
+            </select>
+
+            <label for="minimumRating" class="labels">Order by minimum Rating</label>
+            <select id="minimumRating" name="minimumRating" class="select">
+            </select>
+
+            <label for="date" class="labels">Order by date</label>
+            <select id="date" name="date" class="select">
+                <option value="newestFirst" class="selectMenu">Newest First</option>
+                <option value="oldestFirst" class="selectMenu">Oldest First</option>
+            </select>
+
+            <label for="prioritizeByText" class="labels">Prioritize by Text</label>
+            <select id="prioritizeByText" name="prioritizeByText" class="select">
+                <option value="yes" class="selectMenu">Yes</option>
+                <option value="no" class="selectMenu">No</option>
+            </select>
+
+            <button id="filterButton">Filter</button>
+        </form>
+    </div>
+
+    <div id="resultDiv"></div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+
+</html>
