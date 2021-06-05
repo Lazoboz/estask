@@ -13,31 +13,36 @@
 
 <div id="mainContainer">
     <div id="form-container">
-        <form id="form">
-            <label for="orderByRating" class="labels">Order by rating</label>
-            <select id="orderByRating" name="orderByRating" class="select">
-                <option value="highestFirst" class="selectMenu">Highest First</option>
-                <option value="lowestFirst" class="selectMenu">Lowest First</option>
+        <div id="form"> 
+            <label for="sortByRating" class="labels">Order by rating</label>
+            <select id="sortByRating" name="sortByRating" class="select">
+                <option value="1" class="selectMenu">Highest First</option>
+                <option value="0" class="selectMenu">Lowest First</option>
             </select>
 
-            <label for="minimumRating" class="labels">Order by minimum Rating</label>
-            <select id="minimumRating" name="minimumRating" class="select">
+            <label for="sortByLatest" class="labels">Order by date</label>
+            <select id="sortByLatest" name="sortByLatest" class="select">
+                <option value="1" class="selectMenu">Newest First</option>
+                <option value="0" class="selectMenu">Oldest First</option>
             </select>
 
-            <label for="date" class="labels">Order by date</label>
-            <select id="date" name="date" class="select">
-                <option value="newestFirst" class="selectMenu">Newest First</option>
-                <option value="oldestFirst" class="selectMenu">Oldest First</option>
+            <label for="sortByText" class="labels">Prioritize by Text</label>
+            <select id="sortByText" name="sortByText" class="select">
+                <option value="1" class="selectMenu">Yes</option>
+                <option value="0" class="selectMenu">No</option>
             </select>
 
-            <label for="prioritizeByText" class="labels">Prioritize by Text</label>
-            <select id="prioritizeByText" name="prioritizeByText" class="select">
-                <option value="yes" class="selectMenu">Yes</option>
-                <option value="no" class="selectMenu">No</option>
+            <label for="filterByRating" class="labels">Order by minimum Rating</label>
+            <select id="filterByRating" name="filterByRating" class="select">
+                <option value="0">Select Value</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
             </select>
-
             <button id="filterButton">Filter</button>
-        </form>
+        </div>
     </div>
 
     <div id="resultDiv"></div>

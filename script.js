@@ -1,21 +1,5 @@
-const orderByRating = document.getElementById("orderByRating");
-const date = document.getElementById("date");
-const prioritizeByText = document.getElementById("prioritizeByText");
 const form = document.getElementById("form");
-
-const highestFirst = document.getElementById("highestFirst");
-const lowestFirst = document.getElementById("lowestFirst");
-
-const minimumRating = document.getElementById("minimumRating");
-
-const newestFirst = document.getElementById("newestFirst");
-const oldestFirst = document.getElementById("oldestFirst");
-
-const yes = document.getElementById("yes");
-const no = document.getElementById("no");
-
 const filterButton = document.getElementById("filterButton");
-
 
 let data = [
     {
@@ -538,46 +522,60 @@ let data = [
         "logoHref": null,
         "photos": []
       }
-]
+];
 
-let arrayRating = [];
-Object.values(data).forEach((x) => {
-    arrayRating.push(x.rating)
+// let arrayRating = [];
+// Object.values(data).forEach((x) => {
+//     arrayRating.push(x.rating)
 
-})
+// })
 
-let dateArray = [];
-Object.values(data).forEach((x) => {
-    dateArray.push(x.reviewCreatedOnDate);
-})
+// let dateArray = [];
+// Object.values(data).forEach((x) => {
+//     dateArray.push(x.reviewCreatedOnDate);
+// })
 
-let reviewArray = [];
-Object.values(data).forEach((x) => {
-    reviewArray.push(x.reviewText)
-})
+// let reviewArray = [];
+// Object.values(data).forEach((x) => {
+//     reviewArray.push(x.reviewText)
+// })
+
+function filterDataByRating(dataToFilter) {
+  let filterByRating = document.getElementById("filterByRating");
+
+  if(filterByRating.value == 0){
+    return dataToFilter;
+  }
+  
+  return dataToFilter.filter(x => x.rating == filterByRating.value);
+};
+
+function sortDataByRating(dataToSort) {
+  let sortByRating = document.getElementById("sortByRating");
+
+  let sortedData = 0;
+  return sortedData;
+};
+
+function sortDataByLatest(dataToSort) {
+  let sortByLatest = document.getElementById("sortByLatest");
+
+  let sortedData = 0;
+  return sortedData;
+};
+
+function sortDataByText(dataToSort) {
+  let sortByText = document.getElementById("sortByText");
+
+  let sortedData = 0;
+  return sortedData;
+};
+
+function createTable(data) {
+
+};
 
 
-
-function filterByArrayRating() {
-
-}
-
-function filterByDate() {
-    
-}
-
-function filterByMinimumRating() {
-    
-}
-
-function filterPrioritizeByText() {
-
-}
-
-
-function filter() {
-    
-}
 
 // adding elements to dropdown list !!!!!
 //   let addingElements = (arr, selectTag) => {
@@ -593,13 +591,13 @@ function filter() {
 // addingElements(dateArray, date);
 // addingElements(reviewArray, prioritizeByText);
 
+filterButton.addEventListener("click", (e) => {
+  let filteredData = filterDataByRating(data);
+  // let sortedByText = sortDataByText(filteredData);
+  // let sortedByDate = sortDataByRating(sortedByText);
+  // let finalData = sortDataByLatest(sortedByDate);
+  console.log(filteredData);
 
-
-
-
-filterButton.addEventListener("click", {
-   filter();
-    //sto da se sluci ???
-
-
-})
+  e.preventDefault;
+  // createTable(finalData);
+});
